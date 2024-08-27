@@ -23,12 +23,14 @@ def clean_title(title):
     cleaned_title = cleaned_title.replace(" ", "_").lower()
     return cleaned_title
 
+
 def fetch_where_to_watch(title, year, genre, rating):
     clean_title = title.replace(" ", "+")
     main_url = f'https://www.filmaffinity.com/us/advsearch.php?stext={clean_title}&stype%5B%5D=title&country=&genre=&fromyear=&toyear={year}'
 
+    user_agent = random.choice(USER_AGENT_CHOICES)
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        'User-Agent': user_agent,
     }
 
     response = requests.get(main_url, headers=headers)
@@ -58,13 +60,16 @@ def fetch_where_to_watch(title, year, genre, rating):
 
                 with open('movie_data.csv', 'a', newline='', encoding='utf-8') as csvfile:
                     writer = csv.writer(csvfile)
-                    for platform_title, platform_href in platform2watch.items():
-                        writer.writerow([title, year, genre, rating, platform_title, platform_href])
+                    if platform2watch:
+                        for platform_title, platform_href in platform2watch.items():
+                            writer.writerow([title, year, genre, rating, platform_title, platform_href])
+                    else:
+                        writer.writerow([title, year, genre, rating, "No platforms available", "N/A"])
+                
                 
                 print(f"{title} ({year}): {platform2watch}")
     else:
         print(f"Error for {title} ({year}): {response.status_code}")
-
 
 
 
@@ -106,4 +111,4 @@ def get_rottentomatoes(title, year=None):
                 return f'{rotten_tomatoes_rating}', main_url
         
     
-print(get_rottentomatoes("Crescent City", 2024))
+# print(get_rottentomatoes("Crescent City", 2024))
