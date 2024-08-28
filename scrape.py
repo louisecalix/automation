@@ -14,17 +14,17 @@ USER_AGENT_CHOICES = [
     'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36',
     'Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20140205 Firefox/24.0 Iceweasel/24.3.0',
     'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0',
-    'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:28.0) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2',
+    'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:28.0) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2'
 ]
 
-def clean_title(title):
+def clean_title(title): # remove special character
     title = title.replace('&', 'and')
     cleaned_title = re.sub(r'[^\w\s-]', '', title)
     cleaned_title = cleaned_title.replace(" ", "_").lower()
     return cleaned_title
 
 
-def fetch_where_to_watch(title, year, genre, tmdb_rating):
+def fetch_where_to_watch(title, year, genre, tmdb_rating): # filmaffinity
     clean_title = title.replace(" ", "+")
     main_url = f'https://www.filmaffinity.com/us/advsearch.php?stext={clean_title}&stype%5B%5D=title&country=&genre=&fromyear=&toyear={year}'
 
@@ -58,15 +58,15 @@ def fetch_where_to_watch(title, year, genre, tmdb_rating):
                             platform_href = w.get('href') 
                             platform2watch[platform_title] = platform_href
 
-                rt_rating, rt_url = get_rottentomatoes(title, year)
+                rt_rating = get_rottentomatoes(title, year)
 
                 with open('movie_data.csv', 'a', newline='', encoding='utf-8') as csvfile:
                     writer = csv.writer(csvfile)
                     if platform2watch:
                         for platform_title, platform_href in platform2watch.items():
-                            writer.writerow([title, year, genre, tmdb_rating, rt_rating, rt_url, platform_title, platform_href])
+                            writer.writerow([title, year, genre, tmdb_rating, rt_rating, platform_title, platform_href])
                     else:
-                        writer.writerow([title, year, genre, tmdb_rating, rt_rating, rt_url, "No platforms available", "N/A"])
+                        writer.writerow([title, year, genre, tmdb_rating, rt_rating, "No platforms available", "N/A"])
                 
                 
                 print(f"{title} ({year}): {platform2watch}")
@@ -75,7 +75,7 @@ def fetch_where_to_watch(title, year, genre, tmdb_rating):
 
 
 
-def get_rottentomatoes(title, year=None):
+def get_rottentomatoes(title, year=None): # get rotten tomatoes rating
     clean_title_str = clean_title(title)
     main_url = f'https://www.rottentomatoes.com/m/{clean_title_str}'
 
@@ -113,4 +113,3 @@ def get_rottentomatoes(title, year=None):
                 return f'{rotten_tomatoes_rating}', main_url
         
     return 'N/A', main_url
-# print(get_rottentomatoes("Crescent City", 2024))
