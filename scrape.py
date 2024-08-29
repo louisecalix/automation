@@ -5,6 +5,7 @@ import time
 import random
 import csv
 import re
+import rating
 
 USER_AGENT_CHOICES = [
     'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:23.0) Gecko/20100101 Firefox/23.0',
@@ -59,14 +60,18 @@ def fetch_where_to_watch(title, year, genre, tmdb_rating): # filmaffinity
                             platform2watch[platform_title] = platform_href
 
                 rt_rating = get_rottentomatoes(title, year)
+                if rt_rating != 'N/A':
+                    rt_rating = rt_rating.strip('%')
+                    average_rating = rating.get_average(tmdb_rating, rt_rating)
+
 
                 with open('movie_data.csv', 'a', newline='', encoding='utf-8') as csvfile:
                     writer = csv.writer(csvfile)
                     if platform2watch:
                         for platform_title, platform_href in platform2watch.items():
-                            writer.writerow([title, year, genre, tmdb_rating, rt_rating, platform_title, platform_href])
+                            writer.writerow([title, year, genre, tmdb_rating, rt_rating, average_rating, platform_title, platform_href])
                     else:
-                        writer.writerow([title, year, genre, tmdb_rating, rt_rating, "No platforms available", "N/A"])
+                        writer.writerow([title, year, genre, tmdb_rating, rt_rating, average_rating, "No platforms available", "N/A"])
                 
                 
                 print(f"{title} ({year}): {platform2watch}")
@@ -99,7 +104,7 @@ def get_rottentomatoes(title, year=None): # get rotten tomatoes rating
                 rotten_tomatoes_element = rotten_tomatoes_div.find('rt-text')
                 if rotten_tomatoes_element:
                     rotten_tomatoes_rating = rotten_tomatoes_element.text.strip()
-                    return f'{rotten_tomatoes_rating}', main_url_new
+                    return rotten_tomatoes_rating
 
     if response.status_code == 200:
         rotten_tomatoes_html = response.content
@@ -110,6 +115,6 @@ def get_rottentomatoes(title, year=None): # get rotten tomatoes rating
             rotten_tomatoes_element = rotten_tomatoes_div.find('rt-text')
             if rotten_tomatoes_element:
                 rotten_tomatoes_rating = rotten_tomatoes_element.text.strip()
-                return f'{rotten_tomatoes_rating}', main_url
+                return rotten_tomatoes_rating
         
-    return 'N/A', main_url
+    return 'N/A'
