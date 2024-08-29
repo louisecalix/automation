@@ -56,3 +56,5 @@ def run():
             # print()
             
             send_notification(movie)
+
+run()
