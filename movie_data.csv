@@ -1,25 +1,32 @@
 Title,Year,Genre,TMDB Rating,RT Rating,Average Rating,Platform,URL
-Deadpool & Wolverine,2024,Action,7.763,78,77%,No platforms available,N/A
-Katt Williams: Woke Foke,2024,Documentary,5.4,,54%,Netflix,https://www.filmaffinity.com/us/jwredirect.php?link=08377ee85c0fca29fe8ab4efa236edfb4024e567
-Katt Williams: Woke Foke,2024,Documentary,5.4,,54%,Netflix basic with Ads,https://www.filmaffinity.com/us/jwredirect.php?link=117c6cc5359130172bf29f253281ea691fd3642e
-Inside Out 2,2024,Family,7.684,91,83%,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=9dcdd5220d138642e3ba73d841b140286772bdc1
-Inside Out 2,2024,Family,7.684,91,83%,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=753d5079cffd342ce8f7fe21f8489b6d51b959b0
-Inside Out 2,2024,Family,7.684,91,83%,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=ac122fd989f26ec0aca11fd63952a2eda6bc980e
-Inside Out 2,2024,Family,7.684,91,83%,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=dc7aea6f00b94fc7f99734aad67758ca683b59e1
-Inside Out 2,2024,Family,7.684,91,83%,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=53d3a72f02205ce17d715456fca621bb295d9f61
-Inside Out 2,2024,Family,7.684,91,83%,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=77a65de6612941493317e37971ade82166384942
-Civil War,2024,War,6.954,81,75%,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=7f1ac2a84f02588df503439dd4a36f516e399f57
-Civil War,2024,War,6.954,81,75%,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=0620e59674c3920760f0d529472631a2e48e96e8
-Civil War,2024,War,6.954,81,75%,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=0bc0dcf1bd155be1a3cfdc7800df7063abe635be
-Civil War,2024,War,6.954,81,75%,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=f0168262928249dc23a72ee0a26b9ea9f5ebdb07
-Civil War,2024,War,6.954,81,75%,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=f16e516f612c707fe963238510ea6b16ab265d37
-Civil War,2024,War,6.954,81,75%,FlixFling,https://www.filmaffinity.com/us/jwredirect.php?link=80e8dae99bfba01f8ef6fded519b6727e77be33d
-Civil War,2024,War,6.954,81,75%,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=d87e9170c47cb0e83cf1411cd9e48fa868bc00d1
-Crescent City,2024,Mystery,6.117,17,39%,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=9d34374d3f169509d2cf5016e35083115c175e93
-Crescent City,2024,Mystery,6.117,17,39%,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=224fb51156e84708742aa117b58dd66c84797e88
-Crescent City,2024,Mystery,6.117,17,39%,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=8af0bf57a336f1dd3f08459c0807313c8e1ba371
-Crescent City,2024,Mystery,6.117,17,39%,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=a6c4cb5812171db694f6c09f4de198a7435cb235
-Crescent City,2024,Mystery,6.117,17,39%,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=cea058d75cc11f365133952cb4f589674624870c
-Crescent City,2024,Mystery,6.117,17,39%,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=54791380569c733299c3631e916ce76a98edeee9
-It Ends with Us,2024,Romance,6.92,58,63%,No platforms available,N/A
-Deadpool & Wolverine,2024,Sci-Fi,7.8,78,78%,No platforms available,N/A
+Katt Williams: Woke Foke,2024,Documentary,5.4,,54,Netflix,https://www.filmaffinity.com/us/jwredirect.php?link=08377ee85c0fca29fe8ab4efa236edfb4024e567
+Katt Williams: Woke Foke,2024,Documentary,5.4,,54,Netflix basic with Ads,https://www.filmaffinity.com/us/jwredirect.php?link=117c6cc5359130172bf29f253281ea691fd3642e
+Crescent City,2024,Mystery,6.117,17,39,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=9d34374d3f169509d2cf5016e35083115c175e93
+Crescent City,2024,Mystery,6.117,17,39,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=224fb51156e84708742aa117b58dd66c84797e88
+Crescent City,2024,Mystery,6.117,17,39,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=8af0bf57a336f1dd3f08459c0807313c8e1ba371
+Crescent City,2024,Mystery,6.117,17,39,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=a6c4cb5812171db694f6c09f4de198a7435cb235
+Crescent City,2024,Mystery,6.117,17,39,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=cea058d75cc11f365133952cb4f589674624870c
+Crescent City,2024,Mystery,6.117,17,39,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=54791380569c733299c3631e916ce76a98edeee9
+Twisters,2024,Drama,7.014,74,72,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=a734397c108ec86647d31ab4826342ebb5cacd71
+Twisters,2024,Drama,7.014,74,72,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=20a5afb17b93c5a0d57bd27cef91ea67f10d2719
+Twisters,2024,Drama,7.014,74,72,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=a785a52f911fb680da3a83c03bcd17dafec429d8
+Twisters,2024,Drama,7.014,74,72,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=4bfa6aa0f0d2e1d0e566ab71cafcdb8b2b5c6bfe
+Twisters,2024,Drama,7.014,74,72,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=0999c3e6ef1e79cfb9ae7c376b18ca0d7f31f353
+Twisters,2024,Drama,7.014,74,72,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=0ced510513e6015337c7b610178736ea9f810faa
+Bad Boys: Ride or Die,2024,Crime,7.577,65,70,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=0ea0c0c6065aaaa49cbf236f3432bda20eaf4293
+Bad Boys: Ride or Die,2024,Crime,7.577,65,70,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=ddbd41a9c43bc29f0176eb6e950d85b7111d1f63
+Bad Boys: Ride or Die,2024,Crime,7.577,65,70,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=b081e1465a959e33f4aa513d6f7cca5bfedf1889
+Bad Boys: Ride or Die,2024,Crime,7.577,65,70,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=d0d133064d098d93396d6d5481705af978c371c0
+Bad Boys: Ride or Die,2024,Crime,7.577,65,70,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=abdc527c724e4c6decd1f065f40dbfc5c426b67d
+Bad Boys: Ride or Die,2024,Crime,7.577,65,70,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=c470f8bed15e3f625aa3081a3d3e8cf964a49e27
+Dragonkeeper,2024,Fantasy,7.039,67,68,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=e3f6be516e23772b074ed9df70751260418d6465
+Dragonkeeper,2024,Fantasy,7.039,67,68,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=9ce92a574b488f07edaf9a859318746b83a74f1d
+Dragonkeeper,2024,Fantasy,7.039,67,68,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=419d745b83107010ff4f779e15933874e082b13b
+Dragonkeeper,2024,Fantasy,7.039,67,68,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=a30174ab2306510e7f6023fb01fd2543cf7d2a74
+Dragonkeeper,2024,Fantasy,7.039,67,68,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=ec98f51fdba4e00e678fbb3b5eb6bf83c9051f7f
+Dragonkeeper,2024,Fantasy,7.039,67,68,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=730b584edede5bf64600c7f12b8ce888c6098746
+Katt Williams: Woke Foke,2024,Documentary,5.4,N/A,N/A,,N/A
+Crescent City,2024,Mystery,6.117,N/A,N/A,,N/A
+Twisters,2024,Drama,7.014,N/A,N/A,,N/A
+Bad Boys: Ride or Die,2024,Crime,7.577,N/A,N/A,,N/A
+Dragonkeeper,2024,Fantasy,7.039,N/A,N/A,,N/A
