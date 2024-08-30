@@ -40,7 +40,7 @@ def fetch_movies_by_genre(genre_id, genre_name): # function to get movie title b
         movies = response.json()
         count = 0
         for movie in movies['results']:
-            if count >= 1:
+            if count >= 1: # ilang movie per genre
                 break
             release_year = datetime.strptime(movie['release_date'], '%Y-%m-%d').year # year released
             tmdb_rating = movie.get('vote_average', 'N/A') # tmdb rating
@@ -49,29 +49,12 @@ def fetch_movies_by_genre(genre_id, genre_name): # function to get movie title b
             count += 1
 
 
-
-# if __name__ == '__main__':
-#     with open('movie_data.csv', 'w', newline='', encoding='utf-8') as csvfile: # put in a csv file
-#         writer = csv.writer(csvfile)
-#         writer.writerow(['Title', 'Year', 'Genre', 'TMDB Rating', 'RT Rating', 'Average Rating', 'Platform', 'URL'])
-
-
-#     random_genres = random.sample(list(genres.items()), 5) # to get 5 random genres
-
-#     for genre_name, genre_id in random_genres:
-#         print(f"\nFetching movies for genre: {genre_name} (ID: {genre_id})")
-#         fetch_movies_by_genre(genre_id, genre_name)
-
-#     notification.run()
-
-def job():
-    """Main task to fetch movies and write to CSV."""
-    with open('movie_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
+def task():
+    with open('movie_data.csv', 'w', newline='', encoding='utf-8') as csvfile: # write in csv file
         writer = csv.writer(csvfile)
         writer.writerow(['Title', 'Year', 'Genre', 'TMDB Rating', 'RT Rating', 'Average Rating', 'Platform', 'URL'])
 
-    # Select 5 random genres
-    random_genres = random.sample(list(genres.items()), 5)
+    random_genres = random.sample(list(genres.items()), 5) # to select 5 random genres
 
     for genre_name, genre_id in random_genres:
         print(f"\nFetching movies for genre: {genre_name} (ID: {genre_id})")
@@ -79,9 +62,11 @@ def job():
 
     notification.run()
 
+    
+
 if __name__ == '__main__':
     # schedule.every().day.at("10:00").do(job)
-    schedule.every(5).minutes.do(job)
+    schedule.every(5).minutes.do(task) # to run the script every 5 minutes
 
     print("Scheduler started. The script will run daily at 10:00 AM.")
     

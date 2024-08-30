@@ -7,7 +7,7 @@ import csv
 import re
 import rating
 
-USER_AGENT_CHOICES = [
+USER_AGENT_CHOICES = [ # to rotate diff user agents
     'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:23.0) Gecko/20100101 Firefox/23.0',
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36',
     'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)',
