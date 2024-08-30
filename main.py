@@ -14,7 +14,7 @@ api_key = api_key.read()
 # genre code for tmdb
 genres = {
     'Action': 28,
-    'Animated': 16,
+    # 'Animated': 16,
     'Documentary': 99,
     'Drama': 18,
     'Family': 10751,
@@ -52,7 +52,7 @@ def fetch_movies_by_genre(genre_id, genre_name): # function to get movie title b
 def task():
     with open('movie_data.csv', 'w', newline='', encoding='utf-8') as csvfile: # write in csv file
         writer = csv.writer(csvfile)
-        writer.writerow(['Title', 'Year', 'Genre', 'TMDB Rating', 'RT Rating', 'Average Rating', 'Platform', 'URL'])
+        writer.writerow(['Title', 'Year', 'Genre', 'TMDB Rating', 'RT Rating','FA Rating', 'Average Rating', 'Platform', 'URL'])
 
     random_genres = random.sample(list(genres.items()), 5) # to select 5 random genres
 
@@ -61,15 +61,16 @@ def task():
         fetch_movies_by_genre(genre_id, genre_name)
 
     notification.run()
-
     
 
-if __name__ == '__main__':
-    # schedule.every().day.at("10:00").do(job)
-    schedule.every(5).minutes.do(task) # to run the script every 5 minutes
+task()
 
-    print("Scheduler started. The script will run every 5 minutes.")
+# if __name__ == '__main__':
+#     # schedule.every().day.at("10:00").do(job)
+#     schedule.every(5).minutes.do(task) # to run the script every 5 minutes
+
+#     print("Scheduler started. The script will run every 5 minutes.")
     
-    while True:
-        schedule.run_pending() 
-        time.sleep(1)  
+#     while True:
+#         schedule.run_pending() 
+#         time.sleep(1)  

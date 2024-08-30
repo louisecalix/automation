@@ -2,7 +2,7 @@
 def normalize_rating(rating, highest_rating=10):
     return (rating / highest_rating) * 100
 
-def get_average(tmdb, rt):    
+def get_average(tmdb, rt, fa):    
     try:
         tmdb = float(tmdb)
         tmdb_percent = normalize_rating(tmdb)
@@ -17,7 +17,14 @@ def get_average(tmdb, rt):
         except ValueError:
             rt_percent = None
 
-    ratings = [rating for rating in [tmdb_percent, rt_percent] if rating is not None]
+    try:
+        fa = float(fa)
+        fa_percent = normalize_rating(fa)
+    except ValueError:
+        fa_percent = None
+
+
+    ratings = [rating for rating in [tmdb_percent, rt_percent, fa_percent] if rating is not None]
     
     if not ratings:
         return 'N/A' 

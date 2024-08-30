@@ -39,7 +39,8 @@ def fetch_where_to_watch(title, year, genre, tmdb_rating): # filmaffinity
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
         movie = soup.find('div', class_='fa-shadow adv-search-item')
-        
+        fa_rating = soup.find('div', class_='avgrat-box').text # get fa rating
+
         if movie:
             link = movie.a.get('href')
             time.sleep(random.uniform(2, 5))
@@ -62,16 +63,15 @@ def fetch_where_to_watch(title, year, genre, tmdb_rating): # filmaffinity
                 rt_rating = get_rottentomatoes(title, year) # get rating sa rt
                 if rt_rating != 'N/A':
                     rt_rating = rt_rating.strip('%')
-                    average_rating = rating.get_average(tmdb_rating, rt_rating) # get average
-
+                    average_rating = rating.get_average(tmdb_rating, rt_rating, fa_rating) # get average
 
                 with open('movie_data.csv', 'a', newline='', encoding='utf-8') as csvfile:
                     writer = csv.writer(csvfile)
                     if platform2watch:
                         for platform_title, platform_href in platform2watch.items():
-                            writer.writerow([title, year, genre, tmdb_rating, rt_rating, average_rating, platform_title, platform_href])
+                            writer.writerow([title, year, genre, tmdb_rating, rt_rating, fa_rating, average_rating, platform_title, platform_href])
                     else:
-                        writer.writerow([title, year, genre, tmdb_rating, rt_rating, average_rating, "No platforms available", "N/A"])
+                        writer.writerow([title, year, genre, tmdb_rating, rt_rating, fa_rating, average_rating, "No platforms available", "N/A"])
                 
                 
                 print(f"{title} ({year}): {platform2watch}")
