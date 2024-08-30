@@ -4,6 +4,8 @@ import csv
 import scrape
 import notification
 import random
+import schedule
+import time
 
 
 api_key = open('api_key/key.txt', "r") # put your api key here from tmdb to get movie titles per genre
@@ -30,7 +32,7 @@ genres = {
 }
 
 
-def fetch_movies_by_genre(genre_id, genre_name): # function to get movie title
+def fetch_movies_by_genre(genre_id, genre_name): # function to get movie title by genre
     url = f"https://api.themoviedb.org/3/discover/movie?api_key={api_key}&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres={genre_id}"
     response = requests.get(url)
     
@@ -48,12 +50,27 @@ def fetch_movies_by_genre(genre_id, genre_name): # function to get movie title
 
 
 
-if __name__ == '__main__':
-    with open('movie_data.csv', 'w', newline='', encoding='utf-8') as csvfile: # put in a csv file
+# if __name__ == '__main__':
+#     with open('movie_data.csv', 'w', newline='', encoding='utf-8') as csvfile: # put in a csv file
+#         writer = csv.writer(csvfile)
+#         writer.writerow(['Title', 'Year', 'Genre', 'TMDB Rating', 'RT Rating', 'Average Rating', 'Platform', 'URL'])
+
+
+#     random_genres = random.sample(list(genres.items()), 5) # to get 5 random genres
+
+#     for genre_name, genre_id in random_genres:
+#         print(f"\nFetching movies for genre: {genre_name} (ID: {genre_id})")
+#         fetch_movies_by_genre(genre_id, genre_name)
+
+#     notification.run()
+
+def job():
+    """Main task to fetch movies and write to CSV."""
+    with open('movie_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['Title', 'Year', 'Genre', 'TMDB Rating', 'RT Rating', 'Average Rating', 'Platform', 'URL'])
 
-
+    # Select 5 random genres
     random_genres = random.sample(list(genres.items()), 5)
 
     for genre_name, genre_id in random_genres:
@@ -61,3 +78,13 @@ if __name__ == '__main__':
         fetch_movies_by_genre(genre_id, genre_name)
 
     notification.run()
+
+if __name__ == '__main__':
+    # schedule.every().day.at("10:00").do(job)
+    schedule.every(5).minutes.do(job)
+
+    print("Scheduler started. The script will run daily at 10:00 AM.")
+    
+    while True:
+        schedule.run_pending() 
+        time.sleep(1)  

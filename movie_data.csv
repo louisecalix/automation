@@ -1,16 +1,22 @@
 Title,Year,Genre,TMDB Rating,RT Rating,Average Rating,Platform,URL
-It Ends with Us,2024,Romance,6.92,58,63,No platforms available,N/A
-Crescent City,2024,Mystery,6.117,17,39,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=9d34374d3f169509d2cf5016e35083115c175e93
-Crescent City,2024,Mystery,6.117,17,39,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=224fb51156e84708742aa117b58dd66c84797e88
-Crescent City,2024,Mystery,6.117,17,39,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=8af0bf57a336f1dd3f08459c0807313c8e1ba371
-Crescent City,2024,Mystery,6.117,17,39,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=a6c4cb5812171db694f6c09f4de198a7435cb235
-Crescent City,2024,Mystery,6.117,17,39,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=cea058d75cc11f365133952cb4f589674624870c
-Crescent City,2024,Mystery,6.117,17,39,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=54791380569c733299c3631e916ce76a98edeee9
-Deadpool & Wolverine,2024,Sci-Fi,7.8,78,78,No platforms available,N/A
-Twisters,2024,Drama,7.014,74,72,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=a734397c108ec86647d31ab4826342ebb5cacd71
-Twisters,2024,Drama,7.014,74,72,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=20a5afb17b93c5a0d57bd27cef91ea67f10d2719
-Twisters,2024,Drama,7.014,74,72,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=a785a52f911fb680da3a83c03bcd17dafec429d8
-Twisters,2024,Drama,7.014,74,72,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=4bfa6aa0f0d2e1d0e566ab71cafcdb8b2b5c6bfe
-Twisters,2024,Drama,7.014,74,72,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=0999c3e6ef1e79cfb9ae7c376b18ca0d7f31f353
-Twisters,2024,Drama,7.014,74,72,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=0ced510513e6015337c7b610178736ea9f810faa
-Deadpool & Wolverine,2024,Comedy,7.8,78,78,No platforms available,N/A
+House of Ga'a,2024,History,5.962,,59,Netflix,https://www.filmaffinity.com/us/jwredirect.php?link=32e89e312330db3314ae8ec2877bba3fc84e2bc7
+Katt Williams: Woke Foke,2024,Documentary,5.4,,54,Netflix,https://www.filmaffinity.com/us/jwredirect.php?link=08377ee85c0fca29fe8ab4efa236edfb4024e567
+Katt Williams: Woke Foke,2024,Documentary,5.4,,54,Netflix basic with Ads,https://www.filmaffinity.com/us/jwredirect.php?link=117c6cc5359130172bf29f253281ea691fd3642e
+Inside Out 2,2024,Animated,7.685,91,83,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=9dcdd5220d138642e3ba73d841b140286772bdc1
+Inside Out 2,2024,Animated,7.685,91,83,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=753d5079cffd342ce8f7fe21f8489b6d51b959b0
+Inside Out 2,2024,Animated,7.685,91,83,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=ac122fd989f26ec0aca11fd63952a2eda6bc980e
+Inside Out 2,2024,Animated,7.685,91,83,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=dc7aea6f00b94fc7f99734aad67758ca683b59e1
+Inside Out 2,2024,Animated,7.685,91,83,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=53d3a72f02205ce17d715456fca621bb295d9f61
+Inside Out 2,2024,Animated,7.685,91,83,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=77a65de6612941493317e37971ade82166384942
+Twisters,2024,Drama,7.016,75,72,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=a734397c108ec86647d31ab4826342ebb5cacd71
+Twisters,2024,Drama,7.016,75,72,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=20a5afb17b93c5a0d57bd27cef91ea67f10d2719
+Twisters,2024,Drama,7.016,75,72,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=a785a52f911fb680da3a83c03bcd17dafec429d8
+Twisters,2024,Drama,7.016,75,72,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=4bfa6aa0f0d2e1d0e566ab71cafcdb8b2b5c6bfe
+Twisters,2024,Drama,7.016,75,72,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=0999c3e6ef1e79cfb9ae7c376b18ca0d7f31f353
+Twisters,2024,Drama,7.016,75,72,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=0ced510513e6015337c7b610178736ea9f810faa
+Inside Out 2,2024,Adventure,7.684,91,83,Amazon Video,https://www.filmaffinity.com/us/jwredirect.php?link=9dcdd5220d138642e3ba73d841b140286772bdc1
+Inside Out 2,2024,Adventure,7.684,91,83,Apple TV,https://www.filmaffinity.com/us/jwredirect.php?link=753d5079cffd342ce8f7fe21f8489b6d51b959b0
+Inside Out 2,2024,Adventure,7.684,91,83,Fandango At Home,https://www.filmaffinity.com/us/jwredirect.php?link=ac122fd989f26ec0aca11fd63952a2eda6bc980e
+Inside Out 2,2024,Adventure,7.684,91,83,Microsoft Store,https://www.filmaffinity.com/us/jwredirect.php?link=dc7aea6f00b94fc7f99734aad67758ca683b59e1
+Inside Out 2,2024,Adventure,7.684,91,83,Google Play Movies,https://www.filmaffinity.com/us/jwredirect.php?link=53d3a72f02205ce17d715456fca621bb295d9f61
+Inside Out 2,2024,Adventure,7.684,91,83,YouTube,https://www.filmaffinity.com/us/jwredirect.php?link=77a65de6612941493317e37971ade82166384942

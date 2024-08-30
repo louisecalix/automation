@@ -57,4 +57,4 @@ def run():
             
             send_notification(movie)
 
-run()
+# run()

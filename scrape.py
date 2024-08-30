@@ -59,10 +59,10 @@ def fetch_where_to_watch(title, year, genre, tmdb_rating): # filmaffinity
                             platform_href = w.get('href') 
                             platform2watch[platform_title] = platform_href
 
-                rt_rating = get_rottentomatoes(title, year)
+                rt_rating = get_rottentomatoes(title, year) # get rating sa rt
                 if rt_rating != 'N/A':
                     rt_rating = rt_rating.strip('%')
-                    average_rating = rating.get_average(tmdb_rating, rt_rating)
+                    average_rating = rating.get_average(tmdb_rating, rt_rating) # get average
 
 
                 with open('movie_data.csv', 'a', newline='', encoding='utf-8') as csvfile:
