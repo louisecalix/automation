@@ -68,7 +68,7 @@ if __name__ == '__main__':
     # schedule.every().day.at("10:00").do(job)
     schedule.every(5).minutes.do(task) # to run the script every 5 minutes
 
-    print("Scheduler started. The script will run daily at 10:00 AM.")
+    print("Scheduler started. The script will run every 5 minutes.")
     
     while True:
         schedule.run_pending() 
